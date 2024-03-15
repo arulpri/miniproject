@@ -1,0 +1,152 @@
+*h1
+{
+text-align:center;
+color:white;
+}   
+a
+{
+color:white;
+padding: 20px;
+font-size:30px;
+}
+.container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+
+    .total-amount {
+      font-weight: bold;
+      margin-top: 10px;
+    } 
+     
+.card
+{
+display:flex;
+flex-wrap:wrap;
+padding:50px;
+}
+html 
+{
+height: 100vh;     
+margin-left:10px;
+padding: 20px;   
+background-color: #2d3436;    
+background-image:url('footprint01.jpg');   
+font-family: 'Cookie', cursive;  
+}  
+.title 
+{
+margin-bottom: 10px;  
+padding: 5px 0;  
+font-size: 40px;  
+font-weight: bold;  
+text-align: center;  
+color: red;  
+font-family: 'Cookie', cursive; 
+}
+input[type="submit"]
+{
+width: 60px;   
+height: 60px;   
+float: left;   
+padding: 0;  
+margin: 5px;   
+box-sizing: border-box;    
+background:black;
+border: none;    
+font-size: 30px;   
+line-height: 30px;    
+border-radius: 50%;    
+font-weight: 700;    
+color: #5E5858;    
+cursor: pointer;    
+}     
+input[type=button] 
+{  
+width: 60px;    
+height: 60px;    
+float: left;  
+padding: 0;    
+margin: 5px;   
+box-sizing: border-box;    
+background:white;
+border: none;    
+font-size: 20px;    
+line-height: 20px;    
+border-radius: 50%;    
+font-weight: 600;    
+color: #5E5858;  
+cursor: pointer;    
+}  
+input[type=text] 
+{    
+float: left;    
+padding: 0;    
+box-sizing: border-box;  
+border: none;   
+background: none;  
+color: red;   
+text-align: right;    
+font-weight: 40;
+font-size: 30px;   
+line-height: 40px;   
+margin: 25px;    
+} 
+.calculator 
+{    
+background-color:#f5540a;    
+box-shadow:#f5540a;   
+border: 5px solid black;  
+border-radius: 10px;  
+}  
+#display 
+{    
+height: 40px;    
+text-align: right;    
+background-color: green;    
+border: 3px solid white;    
+font-size: 18px;    
+left: 2px;    
+top: 2px;    
+color: red;  
+}  
+.btnTop 
+{    
+color: white;    
+background-color: #6f6f6f;   
+font-size: 14px;  
+margin: auto;  
+width: 50px;    
+height: 25px;  
+}

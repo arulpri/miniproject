@@ -1,0 +1,86 @@
+<! DOCTYPE html> 
+<html>      
+<head>   
+<meta charset="utf-8">          
+<link href="https://fonts.googleapis.com/css2?
+family=Cookie&display=swap" rel="stylesheet">  
+<link rel="stylesheet" href="style.css">    
+</head>  
+<body>  
+<h1> PETROL PURCHASING</h1>
+<br><br><br><br>
+<div class="card"  >
+<div class="card">  
+<form name="Calculator" class = "calculator" method="post" action="s_p_calc.php" >  
+<table border="2" align="center" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0">  
+<tr>  
+<td>  
+<input type="text" name="Input" Size="35" id="display" style=" width: 270px;  height: 60px; " >  
+<br>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<input type="button" name = "one" style="font-size:30px" value=" 1 " OnClick="Calculator.Input.value += '1'">  
+<input type="button" name = "two" style = "font-size:30px" value=" 2 " OnCLick="Calculator.Input.value += '2'">  
+<input type="button" name = "three" style="font-size:30px" value=" 3 " OnClick="Calculator.Input.value += '3'">    
+<input type="button" name = "four" style="font-size:30px" value=" 4 " OnClick="Calculator.Input.value += '4'"><br>  
+<input type="button" name = "five" style="font-size:30px" value=" 5 " OnCLick="Calculator.Input.value += '5'">  
+<input type="button" name = "six" style="font-size:30px" value=" 6 " OnClick="Calculator.Input.value += '6'">    
+<input type="button" name = "seven" style="font-size:30px" value=" 7 " OnClick="Calculator.Input.value += '7'">  
+<input type="button" name = "eight" style="font-size:30px" value=" 8 " OnCLick="Calculator.Input.value += '8'"> <br> 
+<input type="button" name = "nine" style="font-size:30px" value=" 9 " OnClick="Calculator.Input.value += '9'">  
+<input type="button" name="zero" style="font-size:30px" value=" 0 " OnClick="Calculator.Input.value += '0'">    
+<input type="button" name="dott" style="font-size:30px" value=" . " OnClick="Calculator.Input.value += '.'"> 
+<input type="submit" name="submit" style="font-size:30px" value="pay" OnClick="Calculator.Input.value += ''"> <br></td></tr>  
+</table>  
+</form>  
+</div>
+</div>
+<div class="card">
+<div class="container">
+    <h2>pay for litter petrol</h2>
+    <form id="litterForm">
+      <div class="form-group">
+        <label for="litterQuantity">Select the number of liter:</label>
+        <input type="text" name="re_litter" id="litterQuantity">
+      </div>
+      <div class="form-group">
+        <label for="litterPrice">litter Price:</label>
+        <input type="text" id="litterPrice" value="103.43" disabled>
+      </div>
+      <button type="sumbit">sumbit</button>
+      <p class="error" id="errorMessage"></p>
+      <p class="total-amount" id="totalAmount"></p>
+</div>
+  <script>
+    const litterPricePerDay = 103.43;
+    let currentLitter = 0;
+
+    const litterForm = document.getElementById('litterForm');
+    const litterQuantity = document.getElementById('litterQuantity');
+    const errorMessage = document.getElementById('errorMessage');
+    const totalAmount = document.getElementById('totalAmount');
+    const litterPrice = document.getElementById('litterPrice');
+
+    litterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const selectedQuantity = parseInt(litterQuantity.value);
+
+      if (currentLitter + selectedQuantity <= litterPricePerDay) {
+        currentLitter += selectedQuantity;
+        const pricePerLitter = parseFloat(litterPrice.value);
+        const total = selectedQuantity * pricePerLitter;
+        totalAmount.textContent = `Total Amount: $${total}`;
+      } else {
+        errorMessage.textContent = `Sorry, no more tickets available for today. Maximum bookings per day: ${maxBookingsPerDay}`;
+      }
+    });
+  </script>
+</div>
+<center>
+<a href="s_p_pay.html" class="option-button">pay</a><br>
+</center>
+</body>  
+</html>
+	
